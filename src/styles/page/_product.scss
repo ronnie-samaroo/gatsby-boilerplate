@@ -1,0 +1,107 @@
+.sequence-hero,
+.ecosystem-section,
+.example-section,
+.forensync-hero,
+.workflow-section {
+  @include sectionTop();
+  position: relative;
+}
+
+.sequence-hero,
+.forensync-hero {
+  position: relative;
+  @include sectionGap();
+
+  .triangle-img {
+    left: 0;
+    @include mq("phone", max) {
+      display: none;
+    }
+  }
+  .looper-img {
+    right: 0;
+    @include mq("phone", max) {
+      display: none;
+    }
+  }
+  .row {
+    margin: 80px 0;
+  }
+  .forensync {
+    max-width: 630px;
+    input {
+      color: $grey;
+      outline: none;
+      border: none;
+      box-shadow: none;
+      padding: 16px 25px;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(20px);
+      border-radius: 5px 0 0 5px;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-right: none;
+    }
+    #input_img {
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      width: 18px;
+      height: 18px;
+      z-index: 2;
+      transform: translateY(-50%);
+    }
+    input#email {
+      text-indent: 28px;
+    }
+    .btn-primary {
+      flex-shrink: 0;
+    }
+  }
+  .about-us-kicker {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+  }
+  h1 {
+    max-width: 945px;
+    margin: 0 auto;
+  }
+}
+
+.example-section {
+  position: relative;
+  .example-img {
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+.workflow-section {
+  position: relative;
+  h2 {
+    max-width: 630px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
+  .topology2-img {
+    top: 0;
+    left: 0;
+  }
+  .topology3-img {
+    bottom: -20%;
+    right: 0;
+  }
+  .topology2-img,
+  .topology3-img {
+    @include mq("phone", max) {
+      display: none;
+    }
+  }
+  .workflow-img {
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

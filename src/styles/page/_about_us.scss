@@ -1,0 +1,50 @@
+.team-section {
+  @include sectionTop();
+  position: relative;
+  margin-top: 100px;
+  .member-avatar {
+    border-radius: 5px;
+    width: 100%;
+  }
+  .member-name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+  }
+  .member-role {
+    font-size: 14px;
+    line-height: 130%;
+    color: $grey;
+  }
+}
+
+.contacts-section {
+  @include sectionTop();
+  position: relative;
+  .looper2-img {
+    left: 0;
+  }
+  .looper3-img {
+    right: 0;
+  }
+  .contact-item {
+    @include backFilter();
+    padding: 29px 32px 20px;
+    margin-bottom: 32px;
+    .contact-link {
+      font-size: 16px;
+      line-height: 170%;
+      color: $grey;
+    }
+  }
+}
+
+.contact-img {
+  @include mq("phone", max) {
+    display: none;
+  }
+  @include mq("tablet", max) {
+    width: 100%;
+  }
+}

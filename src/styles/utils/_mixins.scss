@@ -1,0 +1,38 @@
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin sectionGap() {
+  margin-top: 117px;
+  // @include mq("laptop", max) {
+  //   margin-top: 54px;
+  // }
+}
+@mixin backFilter() {
+  background: rgba(255, 255, 255, 0.02);
+  // backdrop-filter: blur(20px);
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+@mixin sectionTop() {
+  margin-top: 150px;
+  @include mq("phone", max) {
+    margin-top: 50px;
+  }
+}
+
+@mixin fixedContent($top) {
+  position: absolute;
+  top: $top;
+  transform: translateY(-$top);
+  width: 93%;
+}

@@ -1,0 +1,291 @@
+.contact-section {
+  margin: 150px 0 80px;
+  position: relative;
+  @include mq("phone", max) {
+    margin: 50px 0;
+  }
+  .contact {
+    &-back1,
+    &-back2 {
+      position: absolute;
+      @include mq("phone", max) {
+        display: none;
+      }
+    }
+    &-back1 {
+      right: 0;
+      top: 0;
+    }
+    &-back2 {
+      left: 0;
+      bottom: 0;
+    }
+    &-form {
+      max-width: 770px;
+      max-height: 663px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      @include backFilter();
+      padding: 60px 100px 75px;
+      @include mq("phone", max) {
+        padding: 30px 40px 35px;
+      }
+      .form {
+        &-group {
+          position: relative;
+          margin-bottom: 16px;
+          input,
+          textarea {
+            border-radius: 6px;
+            background: $black;
+            color: $grey;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            padding: 16px 25px;
+          }
+          textarea {
+            resize: none;
+          }
+          #input_img {
+            position: absolute;
+            top: 50%;
+            left: 37px;
+            width: 18px;
+            height: 18px;
+            transform: translateY(-50%);
+          }
+          input#name,
+          input#email {
+            text-indent: 28px;
+            &::placeholder {
+              background-color: $black;
+            }
+          }
+        }
+      }
+      .contact-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 48px;
+        @include mq("phone", max) {
+          flex-direction: column;
+          margin-top: 20px;
+        }
+        .contact-link {
+          display: flex;
+          align-items: center;
+          a {
+            color: white;
+            line-height: 170%;
+            font-weight: normal;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.service-item {
+  @include backFilter();
+  padding: 72px 32px 30px;
+  margin-bottom: 56px;
+  position: relative;
+  .service-icon {
+    position: absolute;
+    top: -26px;
+  }
+}
+
+.product {
+  @include backFilter();
+  padding: 194px 108px 64px 64px;
+  position: relative;
+  @include mq("phone", max) {
+    padding: 194px 30px 30px;
+  }
+  p {
+    margin: 20px 0 48px;
+  }
+  &-icon {
+    position: absolute;
+    top: -32px;
+    right: 0;
+  }
+}
+
+.sequence {
+  @include backFilter();
+  padding: 58px 45px;
+  text-align: center;
+  position: relative;
+  &-icon {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  p {
+    white-space: pre-line;
+  }
+}
+
+.pricing {
+  @include sectionTop();
+  position: relative;
+  h2 {
+    margin-bottom: 48px;
+  }
+  &-box {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 40px;
+    height: 485px;
+    width: 100%;
+    &.active {
+      border: 1px solid $orange;
+      height: 516px;
+      .pricing-details {
+        li {
+          color: white;
+        }
+      }
+    }
+    @include mq("tablet", max) {
+      padding: 20px;
+    }
+  }
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      @include mq("tablet", max) {
+        display: none;
+      }
+    }
+  }
+  &-type {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    margin-bottom: 11px;
+  }
+  .price {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    small {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: $grey;
+      margin-left: 14px;
+    }
+  }
+  &-details {
+    li {
+      margin-bottom: 14px;
+      color: $grey;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 170%;
+      img {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.faq {
+  position: relative;
+  &-item {
+    padding: 16px;
+    transition: width 0.3s ease-in-out;
+    border-bottom: 1px solid #323236;
+    padding: 28px 32px;
+    &__title {
+      cursor: pointer;
+      font-weight: normal;
+      &::after {
+        content: url("../images/arrow-down.svg");
+        transition: all ease-in-out 0.2s;
+        position: absolute;
+        right: 20px;
+      }
+    }
+
+    &__content {
+      margin-top: 8px;
+      display: none;
+      color: #cecddb;
+      padding-right: 30px;
+    }
+
+    &.active {
+      @include backFilter();
+      .faq-item__title::after {
+        top: 25px;
+        transform: rotate(-180deg);
+        transition: all ease-in-out 0.2s;
+      }
+      .faq-item__content {
+        display: block;
+        white-space: pre-wrap;
+      }
+    }
+  }
+  &-body {
+    margin-top: 48px;
+  }
+}
+
+.pagination {
+  color: white;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  li {
+    @include backFilter();
+    font-size: 14px;
+    line-height: 18.2px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+
+    margin: 0 4px;
+    @include mq("phone", max) {
+      width: 25px;
+      height: 25px;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .pagination-link__active {
+    background: $orange;
+    color: white;
+    border: 1px solid $orange;
+  }
+  .previous,
+  .next {
+    border: none;
+    a {
+      color: white;
+      opacity: 0.3;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}

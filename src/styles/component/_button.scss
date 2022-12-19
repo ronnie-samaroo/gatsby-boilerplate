@@ -1,0 +1,41 @@
+.btn {
+  &-primary {
+    background: $orange;
+    border-radius: 5px;
+    padding: 18px 27px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+  }
+  &-secondary {
+    color: $orange;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid $orange;
+    padding: 18px 27px;
+  }
+  &-contact-us {
+    padding: 14px 23px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: white;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    &:hover {
+      color: $orange;
+      border-color: $orange;
+    }
+  }
+  &-download {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    padding: 20.5px 59.5px;
+    background-color: $orange;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Urbanist";
+  color: white;
+}
+
+p {
+  font-size: 16px;
+  line-height: 27px;
+  font-family: "Urbanist";
+  margin: 0;
+  @include mq("phone", max) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+a,
+span,
+button {
+  font-family: "Urbanist";
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  @include mq("laptop", max) {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  @include mq("laptop", max) {
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  @include mq("laptop", max) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  @include mq("laptop", max) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  @include mq("laptop", max) {
+    font-size: 16px;
+  }
+}
+
+.txt-grey {
+  color: $grey;
+}
