@@ -12,13 +12,9 @@
 
 @mixin sectionGap() {
   margin-top: 117px;
-  // @include mq("laptop", max) {
-  //   margin-top: 54px;
-  // }
 }
 @mixin backFilter() {
   background: rgba(255, 255, 255, 0.02);
-  // backdrop-filter: blur(20px);
   border: 1px solid;
   border-radius: 5px;
 }
